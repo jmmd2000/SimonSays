@@ -1,0 +1,159 @@
+/*-- 
+James Doyle
+19496366
+CS230 Assignment 2 - Simon Game
+CSS Code
+3/3/2021 
+*/
+
+body{
+	padding: 0;
+	margin:0;
+	font-family: 'Orbitron', sans-serif;
+}
+
+/* Container that holds the light circles */
+.grid-container {
+	display: grid;
+	grid-template-columns: 270px 270px;
+	grid-template-rows: 270px 270px;
+	gap: 10px 10px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 0;
+}
+
+/* Container that holds the control circle */
+.control-container{
+	width: 420px;
+	height: 420px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 0;
+	border-radius: 50%;
+}
+  
+/* General shared styling for the light circles */
+.circle{
+	width: 250px;
+	height: 250px;
+	color: white;
+	position: absolute;
+	text-align: center;
+	z-index: 1;
+	border-radius: 50%;
+	border: 10px solid black;
+	cursor: default;
+}
+
+/* The circle with the controls, start button etc */
+#control-circle{
+	width: 400px;
+	height: 400px;
+	background: linear-gradient(180deg, rgba(44,46,47,1) 0%, rgba(0,0,0,1) 100%);
+	color: white;
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+  	margin: auto;
+	text-align: center;
+	z-index: 0;
+	border-radius: 50%;
+	border: 10px solid black;
+}
+
+/* Green circle */
+#green-circle{
+	background: #066303;
+}
+
+/* Red circle */
+#red-circle{
+	background: #6E0703;
+	margin-left: 51%;
+}
+
+/* Yellow circle */
+#yellow-circle{
+	background: #877207;
+	margin-top: 51%;
+}
+
+/* Blue circle */
+#blue-circle{
+	background: #040733;
+	margin-top: 51%;
+	margin-left: 51%;
+}
+
+/* The high score */
+#high{
+	width: 15%;
+	height: 40px;
+	background: lightgrey;
+	display: inline-block;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	top: 180px;
+	left: -240px;
+	right: 0;
+	text-align: center;
+	border: 5px solid #797c88;
+	border-radius: 10px;
+	font-size: xx-large;
+	color: black;
+}
+
+/* The start button */
+#start{
+	width: 30%;
+	height: 40px;
+	background: lightgrey;
+	display: inline-block;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	top: 180px;
+	left: 0px;
+	right: 0px;
+	text-align: center;
+	border: 5px solid #797c88;
+	border-radius: 10px;
+	font-size: 29px;
+	font-weight: bold;
+	color: black;
+	cursor: pointer;
+}
+
+/* The current score */
+#current{
+	width: 15%;
+	height: 40px;
+	background: lightgrey;
+	display: inline-block;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	top: 180px;
+	left: 0;
+	right: -240px;
+	text-align: center;
+	border: 5px solid #797c88;
+	border-radius: 10px;
+	font-size: xx-large;
+	color: black;
+}
+
+/* The indicator light */
+#indicator{
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: red;
+	display: inline-block;
+	margin-top: 250px;
+}
